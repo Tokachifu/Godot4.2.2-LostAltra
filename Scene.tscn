@@ -1,3 +1,30 @@
-[gd_scene format=3 uid="uid://bwogxtax3oid4"]
+[gd_scene load_steps=5 format=3 uid="uid://bwogxtax3oid4"]
+
+[ext_resource type="PackedScene" uid="uid://bl08wwhq6dmib" path="res://übel.tscn" id="1_ysyc2"]
+[ext_resource type="Texture2D" uid="uid://cbuel2b80ko3r" path="res://kenney_pixel-platformer-blocks/Tiles/Marble/tile_0028.png" id="2_mwgwt"]
+[ext_resource type="Texture2D" uid="uid://dc4dkjbiv617d" path="res://kenney_pixel-platformer-blocks/Tiles/Marble/tile_0037.png" id="3_k8pml"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4uajh"]
+size = Vector2(22.5008, 19)
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Übel" parent="." instance=ExtResource("1_ysyc2")]
+position = Vector2(580, 388)
+
+[node name="Floor" type="Sprite2D" parent="."]
+position = Vector2(585, 460)
+scale = Vector2(75.96, 1)
+texture = ExtResource("2_mwgwt")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/StaticBody2D"]
+position = Vector2(0, 0.5)
+scale = Vector2(0.800394, 0.988764)
+shape = SubResource("RectangleShape2D_4uajh")
+
+[node name="Tile0037" type="Sprite2D" parent="Floor"]
+position = Vector2(3.65078e-07, 123)
+scale = Vector2(1.00774, -12.76)
+texture = ExtResource("3_k8pml")
