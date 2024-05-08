@@ -5,18 +5,21 @@
 [ext_resource type="Script" path="res://models/character/PlayerUseAbilityComponent.gd" id="3_l5a1h"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dy53y"]
-radius = 12.0
-height = 68.0
+radius = 64.0
+height = 154.0
 
 [node name="Übel" type="CharacterBody2D"]
+position = Vector2(340, 132)
 script = ExtResource("1_g5as6")
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -36)
+position = Vector2(2.75, 3.25)
+scale = Vector2(1.80159, 2.06164)
 texture = ExtResource("1_dkw66")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -34)
+position = Vector2(-0.25, 2.25)
 shape = SubResource("CapsuleShape2D_dy53y")
 
 [node name="PlayerUseAbilityComponent" type="Node" parent="."]
