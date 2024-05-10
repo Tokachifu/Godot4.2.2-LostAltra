@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://bl08wwhq6dmib"]
+[gd_scene load_steps=49 format=3 uid="uid://bl08wwhq6dmib"]
 
 [ext_resource type="Script" path="res://Scripts/characterScript.gd" id="1_g5as6"]
 [ext_resource type="Texture2D" uid="uid://bjx385avcg1ji" path="res://freeknight/Colour1/Outline/120x80_PNGSheets/_Idle.png" id="3_gyg8k"]
@@ -11,7 +11,6 @@
 [ext_resource type="Script" path="res://models/character/GroundState.gd" id="9_u8825"]
 [ext_resource type="Script" path="res://models/character/AirState.gd" id="10_2ol4b"]
 [ext_resource type="Script" path="res://models/character/LandingState.gd" id="11_tjti6"]
-[ext_resource type="Script" path="res://models/character/debug.gd" id="12_0qbmy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dy53y"]
 radius = 64.0
@@ -382,24 +381,12 @@ script = ExtResource("8_rbpgp")
 character = NodePath("..")
 current_state = NodePath("Ground")
 
-[node name="Ground" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("air_state")]
+[node name="Ground" type="Node" parent="CharacterStateMachine"]
 script = ExtResource("9_u8825")
-air_state = NodePath("../Air")
 
-[node name="Air" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("ground_state")]
+[node name="Air" type="Node" parent="CharacterStateMachine"]
 script = ExtResource("10_2ol4b")
-ground_state = NodePath("../Ground")
 
 [node name="Landing" type="Node" parent="CharacterStateMachine"]
 script = ExtResource("11_tjti6")
 can_move = false
-
-[node name="debug" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
-offset_left = -112.0
-offset_top = -115.0
-offset_right = -61.0
-offset_bottom = -92.0
-scale = Vector2(5, 1.27778)
-text = "STATE:"
-script = ExtResource("12_0qbmy")
-state_machine = NodePath("../CharacterStateMachine")
