@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bwogxtax3oid4"]
 
-[ext_resource type="PackedScene" uid="uid://bl08wwhq6dmib" path="res://übel.tscn" id="1_ysyc2"]
+[ext_resource type="PackedScene" uid="uid://bl08wwhq6dmib" path="res://models/character/übel.tscn" id="1_ysyc2"]
 [ext_resource type="Texture2D" uid="uid://cbuel2b80ko3r" path="res://kenney_pixel-platformer-blocks/Tiles/Marble/tile_0028.png" id="2_mwgwt"]
 [ext_resource type="Texture2D" uid="uid://dc4dkjbiv617d" path="res://kenney_pixel-platformer-blocks/Tiles/Marble/tile_0037.png" id="3_k8pml"]
 [ext_resource type="PackedScene" uid="uid://dta2yf8l6yr55" path="res://models/enemies/testEnemy.tscn" id="4_ehb7e"]
@@ -12,7 +12,7 @@ size = Vector2(22.5008, 19)
 position = Vector2(-2, 0)
 
 [node name="Übel" parent="." instance=ExtResource("1_ysyc2")]
-position = Vector2(504, 375)
+position = Vector2(353, 373)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Übel"]
 remote_path = NodePath("../../Camera2D")
@@ -38,7 +38,7 @@ texture = ExtResource("3_k8pml")
 position = Vector2(1123, 319)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(504, 375)
+position = Vector2(353, 373)
 process_callback = 0
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
