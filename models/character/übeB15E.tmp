@@ -210,12 +210,14 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(10, -7)
+position = Vector2(340, 132)
 script = ExtResource("1_g5as6")
+speed = null
+jump_velocity = null
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3, 2)
+position = Vector2(-0.25, 2.25)
 shape = SubResource("CapsuleShape2D_dy53y")
 
 [node name="PlayerUseAbilityComponent" type="Node" parent="."]
@@ -226,4 +228,4 @@ position = Vector2(13, -73)
 scale = Vector2(3.5, 3.5875)
 sprite_frames = SubResource("SpriteFrames_bbbww")
 animation = &"idle"
-frame_progress = 0.373785
+frame_progress = 0.262756
