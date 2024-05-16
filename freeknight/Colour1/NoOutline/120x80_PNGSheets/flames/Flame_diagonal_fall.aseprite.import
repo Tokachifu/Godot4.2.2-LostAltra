@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://deg401qd5cjmf"
+path="res://.godot/imported/Flame_diagonal_fall.aseprite-4d77fcae193a41595d3aaa343188da3a.res"
+
+[deps]
+
+source_file="res://freeknight/Colour1/NoOutline/120x80_PNGSheets/flames/Flame_diagonal_fall.aseprite"
+dest_files=["res://.godot/imported/Flame_diagonal_fall.aseprite-4d77fcae193a41595d3aaa343188da3a.res"]
+
+[params]
+

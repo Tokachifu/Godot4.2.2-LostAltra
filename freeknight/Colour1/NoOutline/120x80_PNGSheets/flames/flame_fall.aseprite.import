@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://ct755xkuncgtc"
+path="res://.godot/imported/flame_fall.aseprite-6c23dfa1e5e92e6531ef40c40e9ec5b1.res"
+
+[deps]
+
+source_file="res://freeknight/Colour1/NoOutline/120x80_PNGSheets/flames/flame_fall.aseprite"
+dest_files=["res://.godot/imported/flame_fall.aseprite-6c23dfa1e5e92e6531ef40c40e9ec5b1.res"]
+
+[params]
+

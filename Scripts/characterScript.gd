@@ -50,5 +50,3 @@ func update_facing_direction():
 		
 
 			
-		
-	

@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://4novx70ydek5"
+path="res://.godot/imported/flame_up.aseprite-4d8f924f2c1afcaef2ef54dc35bff1ab.res"
+
+[deps]
+
+source_file="res://freeknight/Colour1/NoOutline/120x80_PNGSheets/flames/flame_up.aseprite"
+dest_files=["res://.godot/imported/flame_up.aseprite-4d8f924f2c1afcaef2ef54dc35bff1ab.res"]
+
+[params]
+
