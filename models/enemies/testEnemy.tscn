@@ -1,42 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://dta2yf8l6yr55"]
+[gd_scene load_steps=7 format=3 uid="uid://dta2yf8l6yr55"]
 
-[ext_resource type="Texture2D" uid="uid://cqo5y0jqvv5t6" path="res://models/enemies/Lost_Altra_Plana.png" id="2_2hcpj"]
+[ext_resource type="Texture2D" uid="uid://d067pd5bg7kpy" path="res://models/enemies/enemies x3.png" id="2_arrns"]
 [ext_resource type="Script" path="res://models/enemies/Damageable.gd" id="2_h50nq"]
-[ext_resource type="Texture2D" uid="uid://dfl3pku8fl087" path="res://models/enemies/Lost_Altra_Ubel_Idle.png" id="2_ywejn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wi3sm"]
 radius = 31.0
 height = 132.0
 
-[sub_resource type="Animation" id="Animation_x6hlb"]
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = false
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = false
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
-}
-
-[sub_resource type="Animation" id="Animation_qjx3b"]
+[sub_resource type="Animation" id="Animation_ru2uo"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -51,48 +22,7 @@ tracks/0/keys = {
 "values": [0]
 }
 
-[sub_resource type="Animation" id="Animation_5omt8"]
-resource_name = "new_animation"
-length = 0.7
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_2hcpj")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [3]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 0]
-}
-
-[sub_resource type="Animation" id="Animation_548yk"]
+[sub_resource type="Animation" id="Animation_aryyg"]
 resource_name = "idle"
 length = 0.4
 loop_mode = 1
@@ -106,7 +36,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_ywejn")]
+"values": [ExtResource("2_arrns")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -118,7 +48,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [2]
+"values": [10]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -133,53 +63,30 @@ tracks/2/keys = {
 "values": [0, 1, 2, 3]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_cfjuv"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pl5f0"]
 _data = {
-"RESET": SubResource("Animation_qjx3b"),
-"default": SubResource("Animation_x6hlb"),
-"idle": SubResource("Animation_548yk"),
-"new_animation": SubResource("Animation_5omt8")
+"RESET": SubResource("Animation_ru2uo"),
+"idle": SubResource("Animation_aryyg")
 }
 
 [node name="Enemy" type="CharacterBody2D"]
 position = Vector2(356, 294)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(101.653, 53.4577)
+scale = Vector2(2, 2)
 shape = SubResource("CapsuleShape2D_wi3sm")
 
 [node name="Damageable" type="Node" parent="."]
 script = ExtResource("2_h50nq")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_arrns")
+hframes = 10
+vframes = 6
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_cfjuv")
+"": SubResource("AnimationLibrary_pl5f0")
 }
-speed_scale = 0.6
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(100, 51)
-scale = Vector2(1.41667, 1.57813)
-texture = ExtResource("2_ywejn")
-hframes = 2
-vframes = 2
-metadata/_aseprite_wizard_config_ = {
-"i_mode": -1,
-"keep_anim_length": false,
-"layer": "",
-"o_ex_p": "",
-"o_folder": "",
-"o_name": "",
-"only_visible": false,
-"player": "AnimationPlayer",
-"slice": "",
-"source": "res://Lost_Altra_Ubel_Idle.aseprite"
-}
-metadata/_aseprite_wizard_interface_config_ = {
-"animation_section": true,
-"layer_section": false,
-"output_section": true,
-"slice_section": true
-}
-metadata/_aseprite_wizard_source_file_hash_ = "a990c99287421e064464278a5fd25b7f"
+autoplay = "idle"

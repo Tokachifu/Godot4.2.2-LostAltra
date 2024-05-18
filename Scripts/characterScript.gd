@@ -2,18 +2,13 @@ extends CharacterBody2D
 
 
 @export var speed : float = 150.0
-
-
 @onready var sprite : Sprite2D = $Sprite2D
 @onready var animation_tree : AnimationTree = $AnimationTree
 @onready var state_machine : CharacterStateMachine = $CharacterStateMachine
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var has_double_jumped : bool = false
-var animation_locked : bool = false
 var direction : Vector2 = Vector2.ZERO
-var was_in_air : bool = false
 
 func _ready():
 	animation_tree.active = true
@@ -40,7 +35,7 @@ func _physics_process(delta):
 	
 	
 func update_animated():
-	animation_tree.set("parameters/Move/blend_position", direction.x)
+	animation_tree.set("parameters/move/blend_position", direction.x)
 
 func update_facing_direction():
 	if direction.x > 0:

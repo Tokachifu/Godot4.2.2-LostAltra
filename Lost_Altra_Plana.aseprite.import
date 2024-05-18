@@ -1,8 +1,8 @@
 [remap]
 
-importer="aseprite_wizard.plugin"
+importer="aseprite_wizard.plugin.noop"
 type="PackedDataContainer"
-uid="uid://dgyx1l4bp06fg"
+uid="uid://11j3wbs1qvry"
 path="res://.godot/imported/Lost_Altra_Plana.aseprite-8dc92e740ef45922a0150d13298ca9b6.res"
 
 [deps]
@@ -12,7 +12,3 @@ dest_files=["res://.godot/imported/Lost_Altra_Plana.aseprite-8dc92e740ef45922a01
 
 [params]
 
-split_layers=false
-exclude_layers_pattern=""
-only_visible_layers=false
-sheet_type="Packed"
