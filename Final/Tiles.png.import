@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xmyanipy1my3"
-path="res://.godot/imported/Lost_Altra_Plana.png-032bf492f926fa7fd99db216405249fa.ctex"
+uid="uid://cxc81ggnphrqx"
+path="res://.godot/imported/Tiles.png-434d75a3de05f7ca041e0418c98a5580.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://models/character/Lost_Altra_Plana.png"
-dest_files=["res://.godot/imported/Lost_Altra_Plana.png-032bf492f926fa7fd99db216405249fa.ctex"]
+source_file="res://Final/Tiles.png"
+dest_files=["res://.godot/imported/Tiles.png-434d75a3de05f7ca041e0418c98a5580.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xmyanipy1my3"
-path="res://.godot/imported/Lost_Altra_Plana.png-032bf492f926fa7fd99db216405249fa.ctex"
+uid="uid://crmxsm3pgqbsd"
+path="res://.godot/imported/brush.png-48608c22c0167606d4581c191403da4c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://models/character/Lost_Altra_Plana.png"
-dest_files=["res://.godot/imported/Lost_Altra_Plana.png-032bf492f926fa7fd99db216405249fa.ctex"]
+source_file="res://Final/brush.png"
+dest_files=["res://.godot/imported/brush.png-48608c22c0167606d4581c191403da4c.ctex"]
 
 [params]
 
