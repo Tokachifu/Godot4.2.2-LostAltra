@@ -3,7 +3,7 @@ extends State
 class_name AirState
 
 @export var ground_state : State
-@export var double_jump_velocity : float = -100
+@export var double_jump_velocity : float = -200
 var has_double_jumped = false
 
 func state_process(delta):
