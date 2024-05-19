@@ -34,6 +34,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_q1plb"]
 resource_name = "attack"
 length = 0.6
+step = 0.125
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -93,6 +94,18 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-14, 0), Vector2(46, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sword:monitoring")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.125, 0.375),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
 }
 
 [sub_resource type="Animation" id="Animation_r57sv"]
@@ -276,7 +289,7 @@ transitions = ["Start", "move", SubResource("AnimationNodeStateMachineTransition
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vos6p"]
 size = Vector2(78, 174.5)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="ubel" type="CharacterBody2D"]
 position = Vector2(-1, -1)
 script = ExtResource("1_g5as6")
 metadata/_edit_group_ = true
@@ -292,7 +305,7 @@ scale = Vector2(3, 3)
 texture = ExtResource("4_v4ny8")
 hframes = 3
 vframes = 3
-frame = 1
+frame = 5
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": false,

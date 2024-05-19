@@ -15,10 +15,15 @@ run/main_scene="res://Scene.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SignalBus="*res://signal_bus.gd"
+
 [display]
 
 window/size/viewport_width=1024
 window/size/viewport_height=600
+window/size/mode=2
 
 [editor_plugins]
 
